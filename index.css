@@ -1,0 +1,11 @@
+:root {
+    font-size: 32px;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li::marker {
+    content: none;
+}
