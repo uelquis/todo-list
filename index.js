@@ -29,7 +29,6 @@ form.addEventListener("submit", function (event) {
 
 function createElement(htmlElement) {
     const element = document.createElement(htmlElement);
-    document.getC
     const self = {
         getInstance: () => element,
         getTextContent: () => element.textContent,
