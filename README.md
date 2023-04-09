@@ -1,2 +1,4 @@
 # todo-list
-simple html, css and js website
+simple responsive html, css and js website
+
+https://emanuelmarquis.github.io/todo-list/
