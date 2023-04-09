@@ -6,16 +6,11 @@ const todoList = document.getElementById("todo-list");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const task = createElement("span").appendChildren(
+    const task = createElement("label").appendChild(
         createElement("input")
             .setInputType("checkbox")
-            .setName("checkbox")
-            .getInstance(),
-        createElement("label")
-            .setTextContent(taskCreatorInputField.value)
-            .assignLabelTo("checkbox")
             .getInstance()
-    );
+    ).setTextContent(taskCreatorInputField.value);
 
     const listItem = createElement("li")
         .setClassName("task")
@@ -33,7 +28,7 @@ function createElement(htmlElement) {
         getInstance: () => element,
         getTextContent: () => element.textContent,
         setTextContent: (textContent) => {
-            element.textContent = textContent; 
+            element.appendChild(document.createTextNode(textContent)); 
             return self;
         },
         setInputType: (inputType) => {
@@ -56,10 +51,10 @@ function createElement(htmlElement) {
             element.appendChild(child);
             return self;
         },
-        appendChildren: (...children) => {
-            element.append(...children);
-            return self;
-        }
+        // appendChildren: (...children) => {
+        //     element.append(...children);
+        //     return self;
+        // }
     }
 
     return self;
