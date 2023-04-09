@@ -1,11 +1,19 @@
-:root {
-    font-size: 32px;
-}
-
 ul {
     padding-inline-start: 0;
 }
 
 li::marker {
     content: none;
+}
+
+@media screen and (max-width: 749px){
+    :root {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 750px){
+    :root {
+        font-size: 32px;
+    }
 }
